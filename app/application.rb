@@ -7,6 +7,7 @@ class Application
  
     if req.path.match(/items/)
         @@items.each do |item|
+          
         if @@items.include?(item) 
           resp.write "#{item.price}"
         elsif @@items.exclude?(item)
