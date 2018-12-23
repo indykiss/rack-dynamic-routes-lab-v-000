@@ -7,7 +7,7 @@ class Application
  
     if req.path.match(/items/)
         @@items.each do |item|
-        if @@items.include?(item) 
+        if @@items.include?(item.name) 
           resp.write "#{item.price}"
         else
            resp.write "Item not found"
