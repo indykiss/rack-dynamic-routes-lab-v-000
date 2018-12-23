@@ -9,6 +9,7 @@ class Application
         @@items.each do |item|
         if @@items.include?(item) 
           resp.write "#{item.price}"
+        end 
         else 
            resp.write "Item not found"
            resp.status = 400
