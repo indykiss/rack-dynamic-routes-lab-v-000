@@ -7,14 +7,13 @@ class Application
     req = Rack::Request.new(env)
  
     if req.path.match(/items/)
-      
       @@items.each do |item|
-      resp.write "#{item.price}"
-      end 
-        elsif req.path.match(/items/) == nil 
+        if item.exists?   
+          resp.write "#{item.price}"
+        else 
            resp.status = 400
            resp.write "Item not matched"
-      
+      end 
              else
              resp.write "Route not found"
              resp.status = 404
