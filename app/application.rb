@@ -7,7 +7,7 @@ class Application
  
     @@items.each do |item|
       
-      if @@items.each
+      if 
       
       
     if req.path.match(/items/)
