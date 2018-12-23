@@ -7,15 +7,9 @@ class Application
  
     @@items.each do |item|
       
-      if @@items.
-      
-      
-    if req.path.match(/items/)
-    
-        @@items.each do |item|
-        if @@items.include?(item) 
-          resp.write "#{item.price}"
-        else
+      if @@items.include?(item)
+        resp.write "#{item.price}"
+        elsif @@items.exclude?(item)
            resp.write "Item not found"
            resp.status = 400
          end 
