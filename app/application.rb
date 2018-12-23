@@ -14,9 +14,9 @@ class Application
            resp.status = "400"
            resp.write "Item not matched"
       
-           else
-            resp.write "Route not found"
-            resp.status = 404
+             else
+             resp.write "Route not found"
+             resp.status = 404
     end
     resp.finish
   
