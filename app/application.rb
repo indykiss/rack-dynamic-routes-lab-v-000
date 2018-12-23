@@ -13,6 +13,7 @@ class Application
         else 
            resp.status = 400
            resp.write "Item not matched"
+         end 
       end 
              else
              resp.write "Route not found"
