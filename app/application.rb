@@ -11,7 +11,7 @@ class Application
       resp.write "#{item.price}"
       end 
         elsif req.path.match(/items/) == nil 
-           resp.status = "400"
+           resp.status = 400
            resp.write "Item not matched"
       
              else
