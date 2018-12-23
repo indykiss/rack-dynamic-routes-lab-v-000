@@ -8,7 +8,7 @@ class Application
  
     if req.path.match(/items/)
       @@items.each do |item|
-        if @@item.include?(item) 
+        if @@items.include?(item) 
           resp.write "#{item.price}"
         else 
            resp.status = 400
